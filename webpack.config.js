@@ -1,7 +1,6 @@
 const webpack = require( 'webpack' );
 const path = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
-const LodashModuleReplacementPlugin = require( 'lodash-webpack-plugin' );
 
 const config = {
   entry: [
@@ -20,20 +19,13 @@ const config = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
           'postcss-loader'
         ]
       },
       {
         test: /\.ts(x)?$/,
         use: [
-          'awesome-typescript-loader'
+          'ts-loader'
         ],
         exclude: /node_modules/
       },
@@ -69,8 +61,7 @@ const config = {
         appMountId: 'app',
         filename: 'index.html'
       } ),
-    new webpack.ContextReplacementPlugin( /moment[\/\\]locale$/, /en/ ),
-    new LodashModuleReplacementPlugin
+    new webpack.ContextReplacementPlugin( /moment[\/\\]locale$/, /en/ )
   ],
   resolve: {
     extensions: [
