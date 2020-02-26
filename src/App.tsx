@@ -1,13 +1,19 @@
 import * as React from 'react';
 import { hot } from "react-hot-loader/root";
+import { HeaderBar } from "./components/headerbar";
+
 interface Props {
    name: string
 }
 
-class App extends React.Component<Props> {
+class App extends React.PureComponent<Props> {
+
+  static whyDidYouRender = true
+
   render() {
-    const { name } = this.props;
-    return <div>{ `Hello from ${ name } :)` }</div>;
+    return <React.StrictMode>
+     <HeaderBar/>
+    </React.StrictMode>
   }
 }
 
