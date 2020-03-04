@@ -33,6 +33,7 @@
     "@hot-loader/react-dom": "^16.11.0",
     "@types/react": "^16.9.22",
     "@types/react-dom": "^16.9.5",
+    "@types/react-router-dom": "^5.1.3",
     "@welldone-software/why-did-you-render": "^4.0.5",
     "autoprefixer": "^9.7.4",
     "brotli-gzip-webpack-plugin": "^0.5.0",
@@ -58,6 +59,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "compression-webpack-plugin": "^3.1.0",
-    "react-bootstrap": "^1.0.0-beta.16"
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-router-dom": "^5.1.2"
   }
 }

@@ -10,6 +10,8 @@
       "target": "es5",
       "allowJs": true,
       "jsx": "react",
+      "resolveJsonModule": true,
+      "module": "esnext",
   },
   "include": [
       "./src/**/*"

@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { hot } from "react-hot-loader/root";
-import { HeaderBar } from "./components/headerbar";
-import { LoginPage } from "./components/login/login.ui";
+import { 
+  BrowserRouter as Router, 
+  Route } from "react-router-dom";
+
+import * as Routes from "./routes/routes.json"
+
 interface Props {
    name: string
 }
@@ -11,9 +15,22 @@ class App extends React.PureComponent<Props> {
   static whyDidYouRender = true
 
   render() {
-    return <React.StrictMode>
-     <LoginPage/>
-    </React.StrictMode>
+    return (
+    <Router>
+      <React.StrictMode>
+        {
+          Routes.routes.map(item => {
+            return(
+              <Route
+                path={item.route_path}
+                render={() => <div>Hello world</div>}
+              />
+            )
+          })
+        }
+      </React.StrictMode>
+    </Router>
+    )
   }
 }
 

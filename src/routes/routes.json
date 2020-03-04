@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "route_path":"/post/list",
+      "relative_path":"./modules/post/list/smarts.jsx"
+    }
+  ]
+}
